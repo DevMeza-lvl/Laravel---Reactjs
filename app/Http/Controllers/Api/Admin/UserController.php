@@ -9,8 +9,14 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function index(){
-        $data = User::select('id', 'name', 'email')->get();
+        $data = User::whereHas('roles', function($query){
+            $query->where('name', 'client');
+        })->select('id', 'name', 'email')->get();
         return response()->json($data, 200);
+    }
+
+    public function store(Request $request){
+        
     }
 
     public function show($id){

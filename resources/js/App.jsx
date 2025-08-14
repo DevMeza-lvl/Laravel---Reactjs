@@ -18,9 +18,13 @@ import Register from "./pageauth/Register";
 
 //ADMIN
 import PanelAdmin from "./pageadmin/PanelAdmin";
+import UserAll from "./pageadmin/UserAll";
 
 //CLIENT
 import PanelClient from "./pageclient/PanelClient";
+import UserUpdate from "./pageadmin/UserUpdate";
+import CategoriaAll from "./pageadmin/CategoriaAll";
+import CategoriaStore from "./pageadmin/CategoriaStore";
 
 const App = () => {
     return (
@@ -34,6 +38,10 @@ const App = () => {
                 <Route element={<ProtectedRoutes/>}>
                     <Route path="/admin" element={<LayoutAdmin/>}>
                         <Route index element={<PanelAdmin/>}/>
+                        <Route path="user" element={<UserAll/>}/>
+                        <Route path="user/edit/:id" element={<UserUpdate/>}/>
+                        <Route path="categoria" element={<CategoriaAll/>}/>
+                        <Route path="categoria/create" element={<CategoriaStore/>}/>
                     </Route>
                     <Route path="/client" element={<LayoutClient/>}>
                         <Route index element={<PageHome/>}/>
@@ -52,8 +60,6 @@ if (document.getElementById('example')) {
     const Index = ReactDOM.createRoot(document.getElementById("example"));
 
     Index.render(
-        <React.StrictMode>
             <App/>
-        </React.StrictMode>
     )
 }

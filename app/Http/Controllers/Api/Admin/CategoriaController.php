@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 class CategoriaController extends Controller
 {
     public function index(){
-        $data = Categoria::orderBy("orden")->select('id', 'nombre')->get();
+        $data = Categoria::orderBy("orden")->select('id', 'nombre', 'orden')->get();
         return response()->json($data, 200);
     }
 
