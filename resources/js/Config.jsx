@@ -16,4 +16,7 @@ export default {
     //CATEGORIA
     getCategoriaAll: (token) => axios.get(base_api_url + "admin/categoria", {headers: {Authorization: `Bearer ${token}`}}),
     getCategoriaStore: (token, data) => axios.post(base_api_url + "admin/categoria", data, {headers: {Authorization: `Bearer ${token}`}}),
+    getCategoriaById: (id, token) => axios.get(base_api_url + "admin/categoria/" + id, {headers: {Authorization: `Bearer ${token}`}}),
+    getCategoriaUpdate: (id, data, token) => axios.put(base_api_url + "admin/categoria/" + id, data, {headers: {Authorization: `Bearer ${token}`}}),
+    getCategoriaDeleteById: (id, token) => axios.delete(base_api_url + "admin/categoria/" + id, {headers: {Authorization: `Bearer ${token}`}}),
 }

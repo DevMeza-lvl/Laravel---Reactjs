@@ -25,6 +25,7 @@ import PanelClient from "./pageclient/PanelClient";
 import UserUpdate from "./pageadmin/UserUpdate";
 import CategoriaAll from "./pageadmin/CategoriaAll";
 import CategoriaStore from "./pageadmin/CategoriaStore";
+import CategoriaUpdate from "./pageadmin/CategoriaUpdate";
 
 const App = () => {
     return (
@@ -42,6 +43,7 @@ const App = () => {
                         <Route path="user/edit/:id" element={<UserUpdate/>}/>
                         <Route path="categoria" element={<CategoriaAll/>}/>
                         <Route path="categoria/create" element={<CategoriaStore/>}/>
+                        <Route path="categoria/edit/:id" element={<CategoriaUpdate/>}/>
                     </Route>
                     <Route path="/client" element={<LayoutClient/>}>
                         <Route index element={<PageHome/>}/>
