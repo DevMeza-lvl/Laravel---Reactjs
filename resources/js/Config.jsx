@@ -9,14 +9,21 @@ export default {
     getLogout: () => axios.post(base_api_url + "auth/login", {}),
 
     //ROL ADMIN
-    getUserAll: (token) => axios.get(base_api_url + "admin/user", {headers: {Authorization: `Bearer ${token}`}}),
-    getUserById: (id, token) => axios.get(base_api_url + "admin/user/" + id, {headers: {Authorization: `Bearer ${token}`}}),
-    getUserUpdate: (id, data, token) => axios.put(base_api_url + "admin/user/" + id, data, {headers: {Authorization: `Bearer ${token}`}}),
+        //USUARIOS
+        getUserAll: (token) => axios.get(base_api_url + "admin/user", {headers: {Authorization: `Bearer ${token}`}}),
+        getUserById: (id, token) => axios.get(base_api_url + "admin/user/" + id, {headers: {Authorization: `Bearer ${token}`}}),
+        getUserUpdate: (id, data, token) => axios.put(base_api_url + "admin/user/" + id, data, {headers: {Authorization: `Bearer ${token}`}}),
 
-    //CATEGORIA
-    getCategoriaAll: (token) => axios.get(base_api_url + "admin/categoria", {headers: {Authorization: `Bearer ${token}`}}),
-    getCategoriaStore: (token, data) => axios.post(base_api_url + "admin/categoria", data, {headers: {Authorization: `Bearer ${token}`}}),
-    getCategoriaById: (id, token) => axios.get(base_api_url + "admin/categoria/" + id, {headers: {Authorization: `Bearer ${token}`}}),
-    getCategoriaUpdate: (id, data, token) => axios.put(base_api_url + "admin/categoria/" + id, data, {headers: {Authorization: `Bearer ${token}`}}),
-    getCategoriaDeleteById: (id, token) => axios.delete(base_api_url + "admin/categoria/" + id, {headers: {Authorization: `Bearer ${token}`}}),
+        //CATEGORIA
+        getCategoriaAll: (token) => axios.get(base_api_url + "admin/categoria", {headers: {Authorization: `Bearer ${token}`}}),
+        getCategoriaStore: (token, data) => axios.post(base_api_url + "admin/categoria", data, {headers: {Authorization: `Bearer ${token}`}}),
+        getCategoriaById: (id, token) => axios.get(base_api_url + "admin/categoria/" + id, {headers: {Authorization: `Bearer ${token}`}}),
+        getCategoriaUpdate: (id, data, token) => axios.put(base_api_url + "admin/categoria/" + id, data, {headers: {Authorization: `Bearer ${token}`}}),
+        getCategoriaDeleteById: (id, token) => axios.delete(base_api_url + "admin/categoria/" + id, {headers: {Authorization: `Bearer ${token}`}}),
+
+        //EMPRESA
+        getEmpresaAll: (token) => axios.get(base_api_url + "admin/empresa", {headers: {Authorization: `Bearer ${token}`}}),
+        getEmpresaById: (id, token) => axios.get(base_api_url + "admin/empresa/" + id, {headers: {Authorization: `Bearer ${token}`}}),
+        getEmpresaUpdate: (id, data, token) => axios.put(base_api_url + "admin/empresa/" + id, data, {headers: {Authorization: `Bearer ${token}`}}),
+
 }

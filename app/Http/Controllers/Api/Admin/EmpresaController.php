@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 class EmpresaController extends Controller
 {
     public function index(){
-        $data = Empresa::orderBy("orden")->select('id', 'nombre')->get();
+        $data = Empresa::orderBy("orden")->select('id', 'nombre', 'orden')->get();
         return response()->json($data, 200);
     }
 
