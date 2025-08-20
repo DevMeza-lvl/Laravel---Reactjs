@@ -25,7 +25,7 @@ const Login = () => {
                 if(data.success){
                     setToken(data.user, data.token, data.user.roles[0].name);
                 }else{
-                    console.log(data.message);
+                    console.log(data);
                 }
             });
         }

@@ -26,4 +26,7 @@ export default {
         getEmpresaById: (id, token) => axios.get(base_api_url + "admin/empresa/" + id, {headers: {Authorization: `Bearer ${token}`}}),
         getEmpresaUpdate: (id, data, token) => axios.put(base_api_url + "admin/empresa/" + id, data, {headers: {Authorization: `Bearer ${token}`}}),
 
+        //ROL CLIENTE
+        getEmpresaAllClient: (token) => axios.get(base_api_url + "client/empresa", {headers: {Authorization: `Bearer ${token}`}}),
+        getEmpresaStoreClient: (token, data) => axios.post(base_api_url + "client/empresa", data, {headers: {Authorization: `Bearer ${token}`}}),
 }

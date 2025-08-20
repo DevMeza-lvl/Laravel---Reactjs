@@ -19,15 +19,17 @@ import Register from "./pageauth/Register";
 //ADMIN
 import PanelAdmin from "./pageadmin/PanelAdmin";
 import UserAll from "./pageadmin/UserAll";
-
-//CLIENT
-import PanelClient from "./pageclient/PanelClient";
 import UserUpdate from "./pageadmin/UserUpdate";
 import CategoriaAll from "./pageadmin/CategoriaAll";
 import CategoriaStore from "./pageadmin/CategoriaStore";
 import CategoriaUpdate from "./pageadmin/CategoriaUpdate";
 import EmpresaAll from "./pageadmin/EmpresaAll";
 import EmpresaUpdate from "./pageadmin/EmpresaUpdate";
+
+//CLIENT
+import PanelClient from "./pageclient/PanelClient";
+import EmpresaAllClient from "./pageclient/EmpresaAll";
+import EmpresaStoreClient from "./pageclient/EmpresaStore";
 
 const App = () => {
     return (
@@ -50,8 +52,9 @@ const App = () => {
                         <Route path="empresa/edit/:id" element={<EmpresaUpdate/>}/>
                     </Route>
                     <Route path="/client" element={<LayoutClient/>}>
-                        <Route index element={<PageHome/>}/>
                         <Route index element={<PanelClient/>}/>
+                        <Route path="empresa" element={<EmpresaAllClient/>}/>
+                        <Route path="empresa/create" element={<EmpresaStoreClient/>}/>
                     </Route>
                 </Route>
             </Routes>
