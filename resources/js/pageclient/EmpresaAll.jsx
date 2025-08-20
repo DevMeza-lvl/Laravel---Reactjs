@@ -18,6 +18,13 @@ const EmpresaAll = function(){
         setEmpresas(response.data)
     }
 
+    const _deleteCategoriaById = async (id) => {
+        const isDelete = window.confirm('Estas Seguro que Desea Eliminar la Empresa?')
+        if(!isDelete) return
+        await Config.getEmpresaDeleteByIdClient(id, getToken())
+        _getEmpresaAll()
+    }
+
     return(
         <div className="container bg-light">
             <div className="row">

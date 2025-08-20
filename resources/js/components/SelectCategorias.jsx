@@ -4,8 +4,8 @@ import AuthUser from "../pageauth/AuthUser";
 
 const SelectCategorias = ({data, selected}) => {
     const { getToken } = AuthUser();
-
     const [options, setOptions] = React.useState([]);
+    
     useEffect(() => {
         getOptions();
     }, [])

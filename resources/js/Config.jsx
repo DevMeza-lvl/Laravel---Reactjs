@@ -29,4 +29,7 @@ export default {
         //ROL CLIENTE
         getEmpresaAllClient: (token) => axios.get(base_api_url + "client/empresa", {headers: {Authorization: `Bearer ${token}`}}),
         getEmpresaStoreClient: (token, data) => axios.post(base_api_url + "client/empresa", data, {headers: {Authorization: `Bearer ${token}`}}),
+        getEmpresaByIdClient: (id, token) => axios.get(base_api_url + "client/empresa/" + id, {headers: {Authorization: `Bearer ${token}`}}),
+        getEmpresaUpdateClient: (id, data, token) => axios.put(base_api_url + "client/empresa/" + id, data, {headers: {Authorization: `Bearer ${token}`}}),
+        getEmpresaDeleteByIdClient: (id, token) => axios.delete(base_api_url + "client/empresa/" + id, {headers: {Authorization: `Bearer ${token}`}}),
 }
