@@ -10,6 +10,9 @@ import LayoutAdmin from "./layouts/LayoutAdmin";
 //Public
 import PageHome from "./pagepublic/PageHome";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import NotFound from "./pagepublic/NotFound";
+import Categorias from "./pagepublic/Categorias";
+import Categoria from "./pagepublic/Categoria";
 
 //AUTH
 import ProtectedRoutes from "./pageauth/ProtectedRoutes";
@@ -40,6 +43,9 @@ const App = () => {
                     <Route index element={<PageHome/>}/>
                     <Route path="/login" element={<Login/>}/>
                     <Route path="/register" element={<Register/>}/>
+                    <Route path="/*" element={<NotFound/>}/>
+                    <Route path="/categorias" element={<Categorias/>}/>
+                    <Route path="/categorias/:slug" element={<Categoria/>}/>
                 </Route>
                 <Route element={<ProtectedRoutes/>}>
                     <Route path="/admin" element={<LayoutAdmin/>}>

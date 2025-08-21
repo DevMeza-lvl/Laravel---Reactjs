@@ -12,7 +12,8 @@ use App\Http\Controllers\Api\Client\EmpresaController as EmpresaClientController
 Route::prefix('v1')->group(function () {
 
     //Publico
-    Route::get('/public/{slug}', [FrontController::class, 'categoria']);
+    Route::get('/public/empresas/{quantity}', [FrontController::class, 'empresas']);
+    // Route::get('/public/{slug}', [FrontController::class, 'categoria']);
 
     Route::post('/auth/register', [AuthController::class, 'register']);
     Route::post('/auth/login', [AuthController::class, 'login']);
